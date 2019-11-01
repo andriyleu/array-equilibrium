@@ -1,1 +1,10 @@
-<h1>{{ title }}</h1>
+<mat-toolbar  color="primary"  class="fixed-header">
+  <mat-toolbar-row>
+  <span id="logo"><img  src="./assets/app_logo.svg"  style="width:50px;"></span>
+  <a  mat-button  routerLink="/info"  routerLinkActive="active">Información</a>
+  <a  mat-button  routerLink="/calculator">Calculadora</a>
+  </mat-toolbar-row>
+  </mat-toolbar>
+  <main>
+  <router-outlet  style="margin-top: 80px;"></router-outlet>
+  </main>
