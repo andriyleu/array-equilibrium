@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InfoComponent implements OnInit {
 
+  readonly tab: string = "&nbsp;&nbsp;&nbsp;&nbsp;";
   constructor() { }
 
   ngOnInit() {

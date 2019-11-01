@@ -1,1 +1,12 @@
-<p>info works!</p>
+<h3>¿Que es el indicide de equilbrio?</h3>
+<p>El índice de equilibrio de un Array es cualquier entero P tal que 0 s P < N y la suma de los elementos de los índices inferiores es igual a la suma de los elementos de los índices superiores.</p>
+<p>Por ej:</p>
+<p>A[0] + A[1] + ... + A[P-1] = A[P+1] + ... + A[N-2] + A[N-1]</p>
+<p>La suma de 0 elementos se asume que es igual a 0. Esto puede ocurrir si P = 0 o si P = N-1.</p>
+<h3>Ejemplos</h3>
+<p>Por ej. considerando el siguiente array A que está compuesto por 7 elementos.</p>
+<p>A[0] = -7 &nbsp;&nbsp;&nbsp;&nbsp; A[1] = 1 &nbsp;&nbsp;&nbsp;&nbsp;A[2] = 5 &nbsp;&nbsp;&nbsp;&nbsp; A[3] = 2 &nbsp;&nbsp;&nbsp;&nbsp; A[4] = -4 &nbsp;&nbsp;&nbsp;&nbsp; A[5] = 3 &nbsp;&nbsp;&nbsp;&nbsp; A[6] = 0</p>
+<p>P = 3 es un índice de equilibno de este array ya que:</p>
+<p>A[0] + A[1] * A[2] = A[4] * A[5] + A[6]</p>
+<p>P = 6 también es un índice de equilibrio de este array ya que:</p>
+<p>A[0] + A[1] + A[2] + A[3] * A[4] * A[5] = 0</p>
