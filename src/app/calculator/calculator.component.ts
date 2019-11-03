@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-calculator',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalculatorComponent implements OnInit {
 
-  constructor() { }
+  arrayForm;
+  input;
+  currentArray = [];
+
+  constructor(private formBuilder: FormBuilder) {
+    this.arrayForm = this.formBuilder.group({
+      arrayValue: ''
+    });
+   }
 
   ngOnInit() {
+  }
+
+  onInputChange(oo) {
+    this.currentArray.push(oo);
+    this.arrayForm.reset();
   }
 
 }

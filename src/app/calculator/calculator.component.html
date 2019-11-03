@@ -1,1 +1,5 @@
-<p>calculator works!</p>
+<div id="calculator">
+    <form [formGroup]="arrayForm">
+        <input id="arrayValue" type="number" formControlName="arrayValue" (input)="onInputChange($event.target.value)">
+    </form>
+</div>

@@ -8,6 +8,7 @@ import { MaterialModule } from "./material/material.module";
 import { RouterModule, Routes } from "@angular/router";
 import { CalculatorComponent } from './calculator/calculator.component';
 import { InfoComponent } from './info/info.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 const appRoutes: Routes = [
   { path: "calculator", component: CalculatorComponent },
@@ -28,7 +29,9 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     BrowserAnimationsModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
