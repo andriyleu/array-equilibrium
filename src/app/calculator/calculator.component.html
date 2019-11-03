@@ -1,5 +1,30 @@
-<div id="calculator">
-    <form [formGroup]="arrayForm">
-        <input id="arrayValue" type="number" formControlName="arrayValue" (input)="onInputChange($event.target.value)">
-    </form>
+<div id="content">
+    <h2>Introduce tu array</h2>
+    <div id="calculator">
+        [
+        <div class="value" *ngFor="let value of currentArray">
+            {{value}},
+        </div>
+
+        <form id="arrayForm" [formGroup]="arrayForm">
+            <input id="arrayValue" type="text" formControlName="arrayValue" (input)="onInputChange($event.target.value)">
+        </form>
+        ]
+    </div>
+    <div id="calculateResultArea">
+        <mat-grid-list cols="2" rowHeight="2:1">
+            <mat-grid-tile>
+                <button mat-raised-button (click)="setExampleArray()">Example Array</button>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <button mat-raised-button color="primary" (click)="equilibriumProvider.calculate(currentArray, false)">Calculate index</button>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <button mat-raised-button color="accent" (click)="equilibriumProvider.calculate(currentArray, true)">Calculate indexes</button>
+            </mat-grid-tile>
+            <mat-grid-tile>
+                <button mat-raised-button color="warn" (click)="clearArray()">Reset</button>
+            </mat-grid-tile>
+        </mat-grid-list>
+    </div>
 </div>

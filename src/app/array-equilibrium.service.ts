@@ -9,7 +9,7 @@ export class ArrayEquilibriumService {
 
   constructor() {}
 
-  calculate(array: [], getAll: boolean) {
+  calculate(array: any, getAll: boolean) {
 
     const d = new Date();
 
@@ -27,6 +27,8 @@ export class ArrayEquilibriumService {
       time: t1 - t0,
       arrayWas: array
     });
+
+    console.log(this.storedResults[this.storedResults.length -1]);
   }
 
   private calculateIndexEquilibrium(array: []) {
