@@ -15,19 +15,19 @@
         <div id="calculateResultArea">
             <mat-grid-list cols="2" rowHeight="2:1">
                 <mat-grid-tile>
-                    <button mat-raised-button (click)="setExampleArray()">Example Array</button>
+                    <button mat-raised-button (click)="setExampleArray()">Array de Ejemplo</button>
                 </mat-grid-tile>
                 <mat-grid-tile>
-                    <button mat-raised-button color="primary" (click)="equilibriumProvider.calculate(currentArray, false)">Calculate index</button>
+                    <button mat-raised-button color="primary" (click)="calculateIndex()">Calcular indice</button>
                 </mat-grid-tile>
                 <mat-grid-tile>
-                    <button mat-raised-button color="accent" (click)="equilibriumProvider.calculate(currentArray, true)">Calculate indexes</button>
+                    <button mat-raised-button color="accent" (click)="calculateMultipleIndexes()">Calcular indices</button>
                 </mat-grid-tile>
                 <mat-grid-tile>
-                    <button mat-raised-button color="warn" (click)="clearArray()">Reset</button>
+                    <button mat-raised-button color="warn" (click)="clearArray()">Resetear</button>
                 </mat-grid-tile>
             </mat-grid-list>
         </div>
     </div>
-    <app-results-template [resultsArray]="equilibriumProvider.getStoredResults()"></app-results-template>
+    <app-results-template style="width: 50%" [resultsArray]="equilibriumProvider.getStoredResults()"></app-results-template>
 </div>

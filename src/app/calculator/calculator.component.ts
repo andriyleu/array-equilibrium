@@ -50,21 +50,21 @@ export class CalculatorComponent implements OnInit {
   }
 
   calculateIndex() {
-    if (!this.currentArray.length) {
+    if (this.currentArray.length === 0) {
       return;
     }
     this.equilibriumProvider.calculate(this.currentArray, false);
   }
 
   calculateMultipleIndexes() {
-    if (!this.currentArray.length) {
+    if (this.currentArray.length === 0) {
       return;
     }
     this.equilibriumProvider.calculate(this.currentArray, false);
   }
 
   setExampleArray() {
-    this.currentArray = this.equilibriumProvider.EXAMPLE_ARRAY;
+    this.currentArray = this.equilibriumProvider.EXAMPLE_ARRAY.slice(0);
   }
 
   clearArray() {

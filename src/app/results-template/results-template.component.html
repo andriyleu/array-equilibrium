@@ -1,27 +1,24 @@
+<h2>Resultados</h2>
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
-  <!-- Position Column -->
   <ng-container matColumnDef="date">
     <th mat-header-cell *matHeaderCellDef>Fecha de calculo</th>
     <td mat-cell *matCellDef="let element">{{ element.date | date: 'd/M/yy H:mm:ss' }}</td>
   </ng-container>
 
-  <!-- Name Column -->
   <ng-container matColumnDef="array">
     <th mat-header-cell *matHeaderCellDef>Array</th>
     <td mat-cell *matCellDef="let element">[{{ element.arrayWas }}]</td>
   </ng-container>
 
-  <!-- Weight Column -->
   <ng-container matColumnDef="index">
     <th mat-header-cell *matHeaderCellDef>Indice</th>
     <td mat-cell *matCellDef="let element">{{ element.resultWas }}</td>
   </ng-container>
 
-  <!-- Symbol Column -->
   <ng-container matColumnDef="time">
     <th mat-header-cell *matHeaderCellDef>Tiempo</th>
-    <td mat-cell *matCellDef="let element">{{ element.time }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.time.slice(0, 7) + "s" }}</td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
