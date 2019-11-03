@@ -1,5 +1,12 @@
 import { Injectable } from "@angular/core";
 
+export interface EquilibriumResult {
+  date: string;
+  resultWas: string;
+  time: string;
+  arrayWas: string;
+}
+
 @Injectable({
   providedIn: "root"
 })
@@ -22,11 +29,13 @@ export class ArrayEquilibriumService {
 
     // Store info
     this.storedResults.push({
-      date: d,
-      resultWas: result,
-      time: t1 - t0,
-      arrayWas: array
-    });
+      date: d.toString(),
+      resultWas: result.toString(),
+      time: (t1 - t0).toString(),
+      arrayWas: array.toString()
+    } as EquilibriumResult);
+
+    this.storedResults = this.storedResults.slice(0);
 
     console.log(this.storedResults[this.storedResults.length -1]);
   }

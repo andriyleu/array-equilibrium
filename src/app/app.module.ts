@@ -9,6 +9,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { CalculatorComponent } from './calculator/calculator.component';
 import { InfoComponent } from './info/info.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ResultsTemplateComponent } from './results-template/results-template.component';
 
 const appRoutes: Routes = [
   { path: "calculator", component: CalculatorComponent },
@@ -24,7 +25,7 @@ const appRoutes: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, CalculatorComponent, InfoComponent],
+  declarations: [AppComponent, CalculatorComponent, InfoComponent, ResultsTemplateComponent],
   imports: [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
