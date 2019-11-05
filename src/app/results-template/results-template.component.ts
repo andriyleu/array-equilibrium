@@ -21,6 +21,6 @@ export class ResultsTemplateComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges) {
     console.log(changes);
-    this.dataSource = new MatTableDataSource<EquilibriumResult>(this.resultsArray);
+    this.dataSource = new MatTableDataSource<EquilibriumResult>(this.resultsArray.slice().reverse());
   }
 }
