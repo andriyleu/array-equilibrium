@@ -28,7 +28,10 @@
                 </mat-grid-tile>
             </mat-grid-list>
         </div>
-        <h3 *ngIf="hasResult()">El indice de equilibrio del array [{{ equilibriumProvider.getLastResult().arrayWas }}] es {{ equilibriumProvider.getLastResult().resultWas }}</h3>
+        <h3 *ngIf="!hasResult()">Haz click en el input del formulario para comenzar a escribir un array</h3>
+        <mat-card class="result" *ngIf="hasResult()">
+            <h3>El indice de equilibrio del array [{{ equilibriumProvider.getLastResult().arrayWas }}] es {{ equilibriumProvider.getLastResult().resultWas }}</h3>
+        </mat-card>
     </div>
     <app-results-template style="width: 50%" [resultsArray]="equilibriumProvider.getStoredResults()"></app-results-template>
 </div>
