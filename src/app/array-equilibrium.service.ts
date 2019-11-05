@@ -11,7 +11,7 @@ export interface EquilibriumResult {
   providedIn: "root"
 })
 export class ArrayEquilibriumService {
-  readonly EXAMPLE_ARRAY = [1, 2, 3, 4];
+  readonly EXAMPLE_ARRAY = [-7, 1, 5, 2, -4, 3, 0];
   private storedResults = [];
 
   constructor() {}
@@ -85,5 +85,9 @@ export class ArrayEquilibriumService {
 
   getStoredResults() {
     return this.storedResults;
+  }
+
+  getLastResult() {
+    return this.storedResults[this.storedResults.length - 1];
   }
 }

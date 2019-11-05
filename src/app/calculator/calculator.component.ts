@@ -28,7 +28,7 @@ export class CalculatorComponent implements OnInit {
         return;
       }
 
-      const key = event.key; // const {key} = event; ES6+
+      const key = event.key;
       if (key === 'Backspace' || key === 'Delete') {
           this.currentArray.pop();
       }
@@ -60,7 +60,11 @@ export class CalculatorComponent implements OnInit {
     if (this.currentArray.length === 0) {
       return;
     }
-    this.equilibriumProvider.calculate(this.currentArray, false);
+    this.equilibriumProvider.calculate(this.currentArray, true);
+  }
+
+  hasResult() {
+    return this.equilibriumProvider.getStoredResults().length !== 0;
   }
 
   setExampleArray() {

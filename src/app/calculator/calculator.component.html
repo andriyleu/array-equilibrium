@@ -1,6 +1,6 @@
 <div id="content">
     <div style="width: 50%">
-     <h2>Introduce tu array</h2>
+        <h2>Introduce tu array</h2>
         <div id="calculator">
             [
             <div class="value" *ngFor="let value of currentArray">
@@ -28,6 +28,7 @@
                 </mat-grid-tile>
             </mat-grid-list>
         </div>
+        <h3 *ngIf="hasResult()">El indice de equilibrio del array [{{ equilibriumProvider.getLastResult().arrayWas }}] es {{ equilibriumProvider.getLastResult().resultWas }}</h3>
     </div>
     <app-results-template style="width: 50%" [resultsArray]="equilibriumProvider.getStoredResults()"></app-results-template>
 </div>
