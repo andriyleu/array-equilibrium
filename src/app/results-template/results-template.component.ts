@@ -12,6 +12,9 @@ export class ResultsTemplateComponent implements OnChanges {
   @Input()
   resultsArray;
 
+  @Input()
+  exampleArray;
+
   dataSource;
   displayedColumns;
 

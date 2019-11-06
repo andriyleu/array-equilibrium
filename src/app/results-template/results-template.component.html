@@ -8,7 +8,7 @@
 
   <ng-container matColumnDef="array">
     <th mat-header-cell *matHeaderCellDef>Array</th>
-    <td mat-cell *matCellDef="let element">[{{ element.arrayWas }}]</td>
+    <td mat-cell *matCellDef="let element">[{{ element.arrayWas === exampleArray.toString() ? 'Array de ejemplo' : element.arrayWas }}]</td>
   </ng-container>
 
   <ng-container matColumnDef="index">

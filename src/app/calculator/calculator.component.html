@@ -33,5 +33,5 @@
             <h3>El indice de equilibrio del array [{{ equilibriumProvider.getLastResult().arrayWas }}] es {{ equilibriumProvider.getLastResult().resultWas }}</h3>
         </mat-card>
     </div>
-    <app-results-template style="width: 50%" [resultsArray]="equilibriumProvider.getStoredResults()"></app-results-template>
+    <app-results-template style="width: 50%" [resultsArray]="equilibriumProvider.getStoredResults()" [exampleArray]="equilibriumProvider.EXAMPLE_ARRAY"></app-results-template>
 </div>
