@@ -41,6 +41,12 @@ export class ArrayEquilibriumService {
   }
 
   private calculateIndexEquilibrium(array: []) {
+
+    // If length < 3 there is no index
+    if (array.length < 3) {
+      return -1;
+    }
+
     // Get sum of the whole array
     let sum = array.reduce((a, b) => a + b, 0);
     let leftSum = 0;
