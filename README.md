@@ -13,7 +13,7 @@ All the main functionality described in the PDF regarding this test is completed
 
 There are obviously lot of things that could be improven since this is just a simple PoC, for example:
 
-- UI: Even thought this is like a typical simple academic related website (that explains something and let you calculate it) that normally have an "old" look I feel that this could be improved a lot. Few things that bother me: table is not scrollable and with fixed height, and the way the way the menu of buttons look, both the colors and positioning of them.
+- UI: Even thought this is like a typical simple academic related website (that explains something and let you calculate it) that normally have an "old" look I feel that this could be improved a lot. Few things that bother me: table is not scrollable and with fixed height, and the way the menu of buttons look, both the colors and positioning of them.
 
 - Responsive: The website "is" responsive regarding the viewport, but this has not been checked extensively. Also, in case of smartphones, this should be adaptable, meaning results should be side by side with calculator if the screen has more height than width, it should be below.
 
